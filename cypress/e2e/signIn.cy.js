@@ -16,7 +16,7 @@ describe('Sign In page', () => {
 
   it('should assert validation errors with not valid creds', () => {
     cy.get('#username').type('invalidUser');
-    cy.get('#password').type('' + '{enter}');
+    cy.get('#password').type('123' + '{enter}');
 
     cy.url().should('include', '/login');
     cy.get('.flash.error')
